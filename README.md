@@ -10,13 +10,10 @@ You'll receive a list of urls from [flatmates](https://flatmates.com.au/) by sms
 # Command
 You pass three arguments below.
 
-1. service name
-Currently only faltmates is available
+1. service name : Currently only faltmates is available
 
-2. condition
-Place
+2. condition : Place
 
-3. sort
-TRUE / FALSE
+3. sort : TRUE / FALSE
 
-ex.) node app.js flatemates melbourne true
+``` ex.) node app.js flatemates melbourne true ```
