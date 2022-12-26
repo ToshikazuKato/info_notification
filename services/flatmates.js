@@ -15,7 +15,6 @@ class Flatmates
   }
 
   filterResponse(responseDom){
-	console.log(responseDom,'responseDom')
 	const hrefs = responseDom.window.document.querySelectorAll("a.styles__tileLink___1JJi8");
 	const urls = []
 	Array.from(hrefs).forEach((v,i)=>{

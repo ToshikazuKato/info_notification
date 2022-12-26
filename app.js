@@ -3,18 +3,16 @@ import fetch from "node-fetch";
 import jsdom from "jsdom";
 const { JSDOM } = jsdom;
 import Flatmates from './services/flatmates.js';
+import Gumtree from './services/gumtree.js';
 import serviceList from './config/index.js';
-// import Gumtree from './services/gumtree.js';
 
 const srv = createInstances();
-
 const requestUrl = srv.getUrl();
 const response = await crawling(requestUrl);
 const contents = srv.filterResponse(response);
 sendSMS(contents);
 
 // send sms with urls
-
 function createInstances(){
 	const service = argv[2];
 	const condition = argv[3];
@@ -22,8 +20,8 @@ function createInstances(){
 	switch(service){
 		case "flatmates":
 			return new Flatmates(condition,sort);
-		// case "gumtree":
-		// 	return new Gumtree();
+		case "gumtree":
+			return new Gumtree();
 	}
 }
 
@@ -33,9 +31,8 @@ async function sendSMS (contents) {
 		headers: {
 			'Content-Type': 'application/json'
 		},
-		body:JSON.stringify({urls:contents})
+		body:JSON.stringify(contents)
 	});
-	// return res.json();
 }
 
 async function crawling(requestUrl){
