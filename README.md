@@ -39,9 +39,12 @@ You pass three arguments below.
 ## Batch settings
 1. Create script.command file
 In your command file
-```node app.js ${YOUR_SERVICE_AND_CONDITIONS}
+
+```
+node app.js ${YOUR_SERVICE_AND_CONDITIONS}
 cd ${YOUR_PROJECT_DIRECTORY}
 ```
+
 2. Schedule batch settings
 
 [Reference](https://betterprogramming.pub/how-to-execute-a-cron-job-on-mac-with-crontab-b2decf2968eb)
