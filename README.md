@@ -5,6 +5,7 @@ Setting batch in your local makes it automatic for you to search something you n
 # Prequisite
 You'll need to create an API to receive sms or email.
 You can easily do so by using aws Api gateway & Amazon SNS.
+
 [Reference](https://www.antstack.com/blog/connect-api-gateway-to-sns/)
 
 # Corresponding services
@@ -29,7 +30,7 @@ You pass three arguments below.
 6. category : your category
 7. area : your area
 8. price : your budget for your item ex.) 5000.00__15000.00 * more than 5,000 AUD, less than 15,000 AUD
-9. sort : rank, price_asc, price_desc, closest, carmileageinkms_a(low to high), carmileageinkms_d(high to low), caryear_a(low to high), caryear_d(high to low) * defaul is most recent
+9. sort : rank, price_asc, price_desc, closest, carmileageinkms_a(low to high), carmileageinkms_d(high to low), caryear_a(low to high), caryear_d(high to low) * default is most recent
 
 
 ```ex.) node app.js gumtree ```
@@ -38,8 +39,9 @@ You pass three arguments below.
 ## Batch settings
 1. Create script.command file
 In your command file
-```cd **${YOUR_PROJECT_DIRECTORY}**
-node app.js **${YOUR_SERVICE_AND_CONDITIONS}**
+```node app.js ${YOUR_SERVICE_AND_CONDITIONS}
+cd ${YOUR_PROJECT_DIRECTORY}
 ```
 2. Schedule batch settings
+
 [Reference](https://betterprogramming.pub/how-to-execute-a-cron-job-on-mac-with-crontab-b2decf2968eb)
